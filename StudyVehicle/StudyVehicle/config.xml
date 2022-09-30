@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<setting>
+  <Sql>
+    <DataSource>xxx</DataSource>
+    <Database>xxx</Database>
+    <UserId>xxx</UserId>
+    <Password>xxx</Password>
+  </Sql>
+</setting>

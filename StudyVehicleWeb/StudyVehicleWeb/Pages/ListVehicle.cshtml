@@ -1,0 +1,75 @@
+﻿@page
+@model StudyVehicleWeb.Pages.ListVehicleModel
+@section scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
+@{
+    
+}
+<style>
+    td{ border:1px solid; text-align: center;}
+    th{ border:1px solid; text-align: center; background: lightblue;}
+</style>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Form</title>
+</head>
+<body>
+<Label    text="@Html.DisplayFor(modelItem => Model.Show)" />
+<div class="row">
+    <table class="arrowes-table table-striped" border="1px solid">
+        <thead>
+        <tr>
+            <th >Brand</th>
+            <th>Model</th>
+            <th>CapacityKG</th>
+            <th>capacityM3</th>
+            <th>plate</th>
+            <th>type</th>
+            <th>modelYear</th>
+            <th>color</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model.VehicleList)
+        {
+            <tr border="1px solid">
+                <td>
+                    @Html.DisplayFor(modelItem => item.brand)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.model)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.capacityKg)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.capacityM3)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.plate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.modelYear)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.color)
+                </td>
+
+                <td>
+                    <a href="../EditVehicle?Plate=@Html.DisplayFor(modelItem => item.plate)">Edit</a> |
+                    <a href="../ListVehicle?DeletePlate=@Html.DisplayFor(modelItem => item.plate)">Delete</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

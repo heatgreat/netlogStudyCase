@@ -1,0 +1,97 @@
+﻿@page
+@model StudyVehicleWeb.Pages.AddVehicleModel
+@section scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
+@{
+
+}
+
+<!DOCTYPE html>
+<html>
+ 
+<body>
+<Label    text="@Html.DisplayFor(modelItem => Model.Show)" />
+
+<div class="row">
+    <div class="col-2"/>
+    <div class="col-9">
+        <table class="arrowes-table table-striped" border="1px solid">
+
+            <tbody>
+            <form method="post">
+
+                <tr>
+                    <td>Brand</td>
+                    <td>
+                        <input type="text" name="Brand" value=""/>
+                        @Html.ValidationMessage("Brand")
+                    </td>
+                </tr>
+                <tr>
+                    <td>Model</td>
+                    <td>
+                        <input type="text" name="Model"/>
+                        @Html.ValidationMessage("Model")
+                    </td>
+                </tr>
+                <tr>
+                    <td>CapacityKG</td>
+                    <td>
+                        <input type="text" name="CapacityKG"/>@Html.ValidationMessage("CapacityKG")
+                    </td>
+                </tr>
+                <tr>
+                    <td>CapacityM3</td>
+                    <td>
+                        <input type="text" name="CapacityM3"/>@Html.ValidationMessage("CapacityM3")
+                    </td>
+                </tr>
+                <tr>
+                    <td>Plate</td>
+                    <td>
+                        <input type="text" name="Plate"/>@Html.ValidationMessage("Plate")
+                    </td>
+                </tr>
+                <tr>
+                    <td>Type</td>
+                    <td>
+                        <input type="text" name="Type"/>@Html.ValidationMessage("Type")
+                    </td>
+                </tr>
+                <tr>
+                    <td>ModelYear</td>
+                    <td>
+                        <input type="text" name="ModelYear"/>@Html.ValidationMessage("ModelYear")
+                    </td>
+                </tr>
+                <tr>
+                    <td>Color</td>
+                    <td>
+                        <input type="text" name="Color"/>@Html.ValidationMessage("Color")
+                    </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td>
+                        <input type="submit" value="Kaydet" class="submit"/>
+                    </td>
+                </tr>
+
+            </form>
+            </tbody>
+
+        </table>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+ 
+
+
+
+
+ 

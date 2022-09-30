@@ -1,0 +1,88 @@
+﻿@page
+@model StudyVehicleWeb.Pages.EditVehicleModel
+@section scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
+@{
+    
+}
+
+
+<!DOCTYPE html>
+<html>
+ 
+<body>
+ 
+
+
+<div class="row">
+    <table class="arrowes-table table-striped" border="1px solid">
+    
+        <tbody>
+        <form method="post" >
+    
+            <tr>
+                <td>Brand</td>
+                <td>
+                    <input type="text" name="Brand" value="@Html.DisplayFor(modelItem => Model._vehicle.brand)" />
+                </td>
+            </tr>
+            <tr>
+                <td>Model</td>
+                <td>
+                    <input type="text" name="Model" value="@Html.DisplayFor(modelItem => Model._vehicle.model)" />
+                </td>
+            </tr>
+            <tr>
+                <td>CapacityKG</td>
+                <td>
+                    <input type="text" name="CapacityKG" value="@Html.DisplayFor(modelItem => Model._vehicle.capacityKg)" />
+                </td>
+            </tr>
+            <tr>
+                <td>CapacityM3</td>
+                <td>
+                    <input type="text" name="CapacityM3" value="@Html.DisplayFor(modelItem => Model._vehicle.capacityM3)" />
+                </td>
+            </tr>
+            <tr>
+                <td>Plate</td>
+                <td>
+                    <input type="text" name="Plate" value="@Html.DisplayFor(modelItem => Model._vehicle.plate)" />
+                </td>
+            </tr>
+            <tr>
+                <td>Type</td>
+                <td>
+                    <input type="text" name="Type" value="@Html.DisplayFor(modelItem => Model._vehicle.type)" />
+                </td>
+            </tr>
+            <tr>
+                <td>ModelYear</td>
+                <td>
+                    <input type="text" name="ModelYear" value="@Html.DisplayFor(modelItem => Model._vehicle.modelYear)" />
+                </td>
+            </tr>
+            <tr>
+                <td>Color</td>
+                <td>
+                    <input type="text" name="Color" value="@Html.DisplayFor(modelItem => Model._vehicle.color)" />
+                </td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td>
+                    <input type="submit" value="Güncelle" class="submit" />
+                </td>
+            </tr> 
+        
+        </form>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+
+
+
+ 
